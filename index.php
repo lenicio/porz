@@ -4,6 +4,8 @@ $idade = $_GET['idade'];
 
 echo "<h1>Olá, $nome. Você tem $idade anos.</h1>";
 
+echo "Atualização V2";
+
 ?>
 
 <!DOCTYPE html>
