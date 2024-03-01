@@ -1,11 +1,11 @@
 <?php
-$nome = $_GET['nome'];
-$idade = $_GET['idade'];
 
-echo "<h1>Olá, $nome. Você tem $idade anos.</h1>";
-
-echo "Atualização V2";
-
+// Essa função tem o objetivo de verificar se o array $_GET está vazio
+if(!empty($_GET['nome']) && !empty($_GET['idade'])) {
+  $nome = $_GET['nome'];
+  $idade = $_GET['idade'];
+  echo "<h1>Olá, $nome. Você tem $idade anos.</h1>";
+}
 ?>
 
 <!DOCTYPE html>
@@ -18,9 +18,9 @@ echo "Atualização V2";
 <body>
 
   <!-- GET / POST -->
-  <form method="">
-    <input type="text" name="nome" placeholder="Informe seu nome...">
-    <input type="number" name="idade" placeholder="Informe sua idade...">
+  <form method="get">
+    <input type="text" name="nome" placeholder="Informe seu nome..." required>
+    <input type="number" name="idade" placeholder="Informe sua idade..." required>
     <button type="submit">Enviar</button>
   </form>
 
